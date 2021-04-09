@@ -1,6 +1,6 @@
-const { Schema, model, Types } = require("mongoose");
+const { Schema, model, Types } = require( "mongoose" );
 
-const schema = new Schema({
+const schema = new Schema( {
     email: {
         type: String,
         required: true,
@@ -10,10 +10,10 @@ const schema = new Schema({
         type: String,
         requried: true,
     },
-    links: [{
+    links: [ {
         type: Types.ObjectId,
         ref: "Link",
     }, ],
-});
+} );
 
-module.exports = model("User", schema);
+module.exports = model( "User", schema );
