@@ -19,12 +19,10 @@ function Login () {
     console.log( values );
 
 
-    const formData = new FormData();
 
-    formData.append( "email", values.email );
-    formData.append( "password", values.password );
 
-    dispatch( userLogin( formData, history ) );
+
+    dispatch( userLogin( values, history ) );
 
   };
 

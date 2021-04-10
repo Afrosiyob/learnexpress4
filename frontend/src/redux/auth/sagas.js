@@ -2,6 +2,8 @@ import { all, put, takeEvery, call, fork } from "redux-saga/effects";
 import { USER_LOGIN } from "../actions";
 
 import axios from "axios";
+import { message } from "antd";
+import { userLoginSuccess } from "./actions";
 
 function* watchUserLogin () {
     yield takeEvery( USER_LOGIN, workUserLogin );
@@ -24,10 +26,15 @@ function* workUserLogin ( { payload } ) {
     const { res, error } = yield call( fetchUserLogin, req );
 
     if ( res ) {
-        console.log( res );
-        console.log( history );
+
+        localStorage.setItem( "token", res.data.token );
+        history.push( '/' );
+        yield put( userLoginSuccess( res.data ) );
+        message.loading( "waiting..." ).then( () => message.success( "welcome..." ) )
+
     } else {
         console.log( error );
+        
     }
 
 }
