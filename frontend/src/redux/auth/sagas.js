@@ -9,11 +9,13 @@ function* watchUserLogin () {
 
 
 function fetchUserLogin ( req ) {
-    return axios.post( '/api/auth/registration', {
+    return axios.post( '/api/auth/login', req, {
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
+            Accept: "application/json",
+
         }
-    }, { req } ).then( ( res ) => ( { res } ) ).catch( ( error ) => ( { error } ) );
+    } ).then( ( res ) => ( { res } ) ).catch( ( error ) => ( { error } ) );
 }
 
 function* workUserLogin ( { payload } ) {

@@ -18,7 +18,13 @@ function Login () {
   const onFinish = ( values ) => {
     console.log( values );
 
-    dispatch( userLogin( values, history ) );
+
+    const formData = new FormData();
+
+    formData.append( "email", values.email );
+    formData.append( "password", values.password );
+
+    dispatch( userLogin( formData, history ) );
 
   };
 
