@@ -34,6 +34,9 @@ router.post(
             // GET REQUEST FROM FRONTEND
             const { email, password } = req.body;
 
+            console.log( "Body : " + req.body );
+
+
             // CHECK USER WITH EMAIL
             const checkEmail = await User.findOne( { email } );
 
@@ -68,6 +71,7 @@ router.post(
         check( "email", "Incorrect email..." ).normalizeEmail().isEmail(),
         check( "password", "Enter Password" ).exists(),
     ],
+
     async ( req, res ) => {
         try {
             // GET ERROR FROM VALIDATION
@@ -83,7 +87,7 @@ router.post(
 
             // GET REQUEST FROM FRONTEND
             const { email, password } = req.body;
-            console.log( req.body );
+            console.log( "Body : " + req.body );
 
 
             // CHECK AND GET USER WITH EMAIL

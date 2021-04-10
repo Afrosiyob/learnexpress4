@@ -3,12 +3,20 @@ const express = require( "express" );
 const config = require( "config" );
 const mongoose = require( "mongoose" );
 
+
+
+
+
+
 // CREATE SERVER
 const APP = express();
 
 APP.use( express.json( { extended: true } ) );
 // ROUTES
 APP.use( "/api/auth", require( "./routes/auth.routes" ) );
+
+
+
 
 // SET PORT
 const PORT = config.get( "PORT" ) || 5000;
