@@ -9,7 +9,7 @@ function* watchUserLogin () {
 
 
 function fetchUserLogin ( req ) {
-    return axios.post( 'https://localhost:5000/api/auth/login', {
+    return axios.post( 'http://localhost:5000/api/auth/login', {
         headers: {
             'Content-Type': 'application/json'
         }
