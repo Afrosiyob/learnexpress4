@@ -13,7 +13,7 @@ function Login () {
 
   const dispatch = useDispatch();
 
-  let history = useHistory()
+  let history = useHistory();
 
   const onFinish = ( values ) => {
     console.log( values );

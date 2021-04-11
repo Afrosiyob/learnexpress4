@@ -21,9 +21,11 @@ const PORT = config.get( "PORT" ) || 5000;
 // CONNECT MONGOOSE
 async function start () {
     try {
-        await mongoose.connect( config.get( "mongoUrl" ), {
+        await mongoose.connect( config.get( "mongoURI" ), {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false,
         } );
         // RUN SERVER
         APP.listen( PORT, () => console.log( `Server is runnig on ${ PORT } port` ) );

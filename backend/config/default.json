@@ -1,5 +1,6 @@
 {
   "PORT": 5000,
-  "mongoUrl": "mongodb+srv://naruto:1234567ab@naruto.5xclt.mongodb.net/app?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://admin:nBgrP62vG9c7KOnM@cluster0.zptes.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+
   "jwtSecret": "Hinata Hyuga"
 }
