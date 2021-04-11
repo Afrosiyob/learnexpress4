@@ -5,9 +5,6 @@ const mongoose = require( "mongoose" );
 
 
 
-
-
-
 // CREATE SERVER
 const APP = express();
 
@@ -26,9 +23,7 @@ async function start () {
     try {
         await mongoose.connect( config.get( "mongoUrl" ), {
             useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false,
+            useUnifiedTopology: true
         } );
         // RUN SERVER
         APP.listen( PORT, () => console.log( `Server is runnig on ${ PORT } port` ) );
