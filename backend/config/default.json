@@ -1,6 +1,5 @@
 {
-    "PORT": 5000,
-    "mongoUrl": "mongodb+srv://admin:2230102ab@cluster0.mqr4f.mongodb.net/app?retryWrites=true&w=majority",
- 
-    "jwtSecret": "Hinata Hyuga"
+  "PORT": 5000,
+  "mongoUrl": "mongodb+srv://admin:2230102ab@cluster0.mqr4f.mongodb.net/app?retryWrites=true&w=majority",
+  "jwtSecret": "Hinata Hyuga"
 }
