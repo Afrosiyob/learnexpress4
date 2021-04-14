@@ -1,6 +1,6 @@
 {
-  "PORT": 5000,
-  "mongoURI": "mongodb+srv://admin:nBgrP62vG9c7KOnM@cluster0.zptes.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-
-  "jwtSecret": "Hinata Hyuga"
+    "PORT": 5000,
+    "mongoURI": "mongodb+srv://admin:nBgrP62vG9c7KOnM@cluster0.zptes.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "Hinata Hyuga",
+    "baseUrl": "http://localhost:5000"
 }
