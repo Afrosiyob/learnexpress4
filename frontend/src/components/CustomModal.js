@@ -1,11 +1,12 @@
 import React from "react";
 import { Modal } from "antd";
+
 function CustomModal({
   title = "Basic Modal",
   visible = false,
   handleOk,
   handleCancel,
-  content,
+  component: Component,
 }) {
   return (
     <Modal
@@ -13,8 +14,9 @@ function CustomModal({
       visible={visible}
       onOk={handleOk}
       onCancel={handleCancel}
+      footer={null}
     >
-      {content}
+      <Component handleOk={handleOk} onCancel={handleCancel} />{" "}
     </Modal>
   );
 }

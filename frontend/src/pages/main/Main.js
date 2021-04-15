@@ -31,11 +31,11 @@ function Main() {
         visible={state.isModalVisible}
         handleOk={handleOk}
         handleCancel={handleCancel}
-        content={<AddProduct />}
-      />
+        component={AddProduct}
+      />{" "}
       <Header>
         <div className="logo" />
-      </Header>
+      </Header>{" "}
       <Content style={{ padding: "50px" }}>
         <div className="site-layout-content">
           <Row gutter={[8, 8]} justify="space-between" align="middle">
@@ -47,19 +47,19 @@ function Main() {
                 title="Title"
                 subTitle="This is a subtitle"
               />
-            </Col>
+            </Col>{" "}
             <Col>
               {" "}
               <button onClick={showModal}> add modal </button>{" "}
-            </Col>
+            </Col>{" "}
           </Row>
 
           <BooksTable />
-        </div>
-      </Content>
+        </div>{" "}
+      </Content>{" "}
       <Footer style={{ textAlign: "center" }}>
-        Ant Design ©2018 Created by Ant UED
-      </Footer>
+        Ant Design© 2018 Created by Ant UED{" "}
+      </Footer>{" "}
     </Layout>
   );
 }
