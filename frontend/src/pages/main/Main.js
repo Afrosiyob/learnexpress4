@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Col, Layout, PageHeader, Row } from "antd";
+import { Col, Layout, PageHeader, Row, Button } from "antd";
 import BooksTable from "../../components/BooksTable";
 import "./Main.scss";
 import CustomModal from "../../components/CustomModal";
 import AddProduct from "../../layouts/AddProduct";
-
+import { AppstoreAddOutlined } from "@ant-design/icons";
 function Main() {
   const { Header, Content, Footer } = Layout;
 
@@ -50,7 +50,14 @@ function Main() {
             </Col>{" "}
             <Col>
               {" "}
-              <button onClick={showModal}> add modal </button>{" "}
+              <Button
+                // type="primary"
+                size="large"
+                onClick={showModal}
+                icon={<AppstoreAddOutlined />}
+              >
+                Add Product
+              </Button>
             </Col>{" "}
           </Row>
 

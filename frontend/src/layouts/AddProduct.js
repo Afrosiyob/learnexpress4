@@ -17,7 +17,12 @@ function AddProduct({ handleOk, handleCancel }) {
     console.log("Failed:", errorInfo);
   };
   return (
-    <Form form={form} onFinish={onFinish} onFinishFailed={onFinishFailed}>
+    <Form
+      layout="vertical"
+      form={form}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+    >
       <Form.Item
         label="Name"
         name="name"
@@ -44,7 +49,7 @@ function AddProduct({ handleOk, handleCancel }) {
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit">
-          Submit{" "}
+          Add Product{" "}
         </Button>{" "}
       </Form.Item>{" "}
     </Form>
